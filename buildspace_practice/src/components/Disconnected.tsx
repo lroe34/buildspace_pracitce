@@ -11,11 +11,11 @@ import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-const modalState = useWalletModal();
-const { wallet, connect } = useWallet();
+
 
 const Disconnected: FC = () => {
-
+  const modalState = useWalletModal();
+  const { wallet, connect } = useWallet();
   const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
     (event) => {
       if (event.defaultPrevented) {
